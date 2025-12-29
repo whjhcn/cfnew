@@ -45,6 +45,15 @@
         'DigitalOcean': ['数码海', 'DigitalOcean'],
         'Vultr': ['Vultr', 'Vultr'],
         'Multacom': ['Multacom', 'Multacom']
+		// === 新增地区映射 ===
+        'HK': ['🇭🇰 香港', 'HK', 'Hong Kong'],
+        'TW': ['🇹🇼 台湾', 'TW', 'Taiwan'],
+        'AU': ['🇦🇺 澳大利亚', 'AU', 'Australia'],
+        'IN': ['🇮🇳 印度', 'IN', 'India'],
+        'CA': ['🇨🇦 加拿大', 'CA', 'Canada'],
+        'BR': ['🇧🇷 巴西', 'BR', 'Brazil'],
+        'ZA': ['🇿🇦 南非', 'ZA', 'South Africa']
+        // === 新增结束 ===
     };
 
     let backupIPs = [
@@ -61,6 +70,15 @@
         { domain: 'ProxyIP.DigitalOcean.CMLiussss.net', region: 'DigitalOcean', regionCode: 'DigitalOcean', port: 443 },
         { domain: 'ProxyIP.Vultr.CMLiussss.net', region: 'Vultr', regionCode: 'Vultr', port: 443 },
         { domain: 'ProxyIP.Multacom.CMLiussss.net', region: 'Multacom', regionCode: 'Multacom', port: 443 }
+        // === 新增地区开始 ===
+        { domain: 'ProxyIP.HK.CMLiussss.net', region: 'HK', regionCode: 'HK', port: 443 },
+        { domain: 'ProxyIP.TW.CMLiussss.net', region: 'TW', regionCode: 'TW', port: 443 },
+        { domain: 'ProxyIP.AU.CMLiussss.net', region: 'AU', regionCode: 'AU', port: 443 },
+        { domain: 'ProxyIP.IN.CMLiussss.net', region: 'IN', regionCode: 'IN', port: 443 },
+        { domain: 'ProxyIP.CA.CMLiussss.net', region: 'CA', regionCode: 'CA', port: 443 },
+        { domain: 'ProxyIP.BR.CMLiussss.net', region: 'BR', regionCode: 'BR', port: 443 },
+        { domain: 'ProxyIP.ZA.CMLiussss.net', region: 'ZA', regionCode: 'ZA', port: 443 }
+        // === 新增地区结束 ===
     ];
 
     const directDomains = [
@@ -176,7 +194,14 @@
                 const countryToRegion = {
                     'US': 'US', 'SG': 'SG', 'JP': 'JP', 'KR': 'KR',
                     'DE': 'DE', 'SE': 'SE', 'NL': 'NL', 'FI': 'FI', 'GB': 'GB',
-                    'CN': 'SG', 'TW': 'JP', 'AU': 'SG', 'CA': 'US',
+                    'CN': 'HK',      // 中国大陆优先香港
+                    'HK': 'HK',
+                    'TW': 'TW',
+                    'AU': 'AU',
+                    'IN': 'IN',
+                    'CA': 'CA',
+                    'BR': 'BR',
+                    'ZA': 'ZA',
                     'FR': 'DE', 'IT': 'DE', 'ES': 'DE', 'CH': 'DE',
                     'AT': 'DE', 'BE': 'NL', 'DK': 'SE', 'NO': 'SE', 'IE': 'GB'
                 };
